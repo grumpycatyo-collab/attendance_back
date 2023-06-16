@@ -9,8 +9,8 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public String getRoleById(String id) {
-        String role = userRepository.findRoleByEmail(id);
+    public String getRoleById(String email) {
+        String role = userRepository.findRoleByEmail(email);
         return role != null ? role : "unknown";
     }
 }

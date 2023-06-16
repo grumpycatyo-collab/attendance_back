@@ -4,12 +4,12 @@ import jakarta.persistence.Entity;
 
 @Entity
 public class Student extends User{
-    private String group;
-    private Absente abstente;
+    private String grupa;
+    private String abstente;
 
-    public Student(String login, String password, Integer id, String name, String surname, String group, Absente abstente) {
+    public Student(String login, String password, Integer id, String name, String surname, String group, String abstente) {
         super(login, password, id, name, surname);
-        this.group = group;
+        this.grupa = group;
         this.abstente = abstente;
     }
 
@@ -17,19 +17,19 @@ public class Student extends User{
 
     }
 
-    public String getGroup() {
-        return group;
+    public String getGrupa() {
+        return grupa;
     }
 
-    public void setGroup(String group) {
-        this.group = group;
+    public void setGrupa(String group) {
+        this.grupa = group;
     }
 
-    public Absente getAbstente() {
+    public String getAbstente() {
         return abstente;
     }
 
-    public void setAbstente(Absente abstente) {
+    public void setAbstente(String abstente) {
         this.abstente = abstente;
     }
 
