@@ -1,6 +1,7 @@
 package com.example.attendance_back;
 
 
+
 public abstract class User {
     private String login;
     private String password;
