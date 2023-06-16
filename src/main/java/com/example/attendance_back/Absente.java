@@ -10,14 +10,7 @@ public class Absente {
     private Date datarecuperare;
    private AbsentaStatus status;
 
-    public Absente(Integer id, Teacher teacher, String subject, Date dataabsenta, Date datarecuperare, AbsentaStatus status) {
-        this.id = id;
-        this.teacher = teacher;
-        this.subject = subject;
-        this.dataabsenta = dataabsenta;
-        this.datarecuperare = datarecuperare;
-        this.status = status;
-    }
+
 
     public Integer getId() {
         return id;

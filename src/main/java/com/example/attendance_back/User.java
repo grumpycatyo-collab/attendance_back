@@ -47,4 +47,12 @@ public abstract class User {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+
+    public User(String login, String password, Integer id, String name, String surname) {
+        this.login = login;
+        this.password = password;
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+    }
 }
