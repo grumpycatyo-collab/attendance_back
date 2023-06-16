@@ -2,15 +2,14 @@ package com.example.attendance_back;
 
 import jakarta.persistence.Entity;
 
-@Entity
 public class Student extends User{
     private String grupa;
     private String abstente;
 
-    public Student(String login, String password, Integer id, String name, String surname, String group, String abstente) {
-        super(login, password, id, name, surname);
-        this.grupa = group;
-        this.abstente = abstente;
+    public Student(String login, String role, String password, Integer id, String name, String surname, String grupa, String absente) {
+        super(login, role, password, id, name, surname);
+        this.grupa = grupa;
+        this.abstente = absente;
     }
 
     public Student() {

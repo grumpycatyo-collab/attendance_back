@@ -5,12 +5,13 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
+    private final UserRepository userRepository;
 
-    @Autowired
-    private UserRepository userRepository;
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
-    public String getRoleById(String email) {
-        String role = userRepository.findRoleByEmail(email);
-        return role != null ? role : "unknown";
+    public String findRoleByEmail(String email) {
+        return userRepository.findRoleByEmail(email);
     }
 }

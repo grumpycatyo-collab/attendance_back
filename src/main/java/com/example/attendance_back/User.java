@@ -1,12 +1,14 @@
 package com.example.attendance_back;
 
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 
-@MappedSuperclass
-public abstract class User {
+@Entity
+public  class User {
     private String login;
+    private String role;
     private String password;
     @Id
     private Integer id;
@@ -56,8 +58,17 @@ public abstract class User {
         this.surname = surname;
     }
 
-    public User(String login, String password, Integer id, String name, String surname) {
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public User(String login, String role, String password, Integer id, String name, String surname) {
         this.login = login;
+        this.role = role;
         this.password = password;
         this.id = id;
         this.name = name;

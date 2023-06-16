@@ -1,10 +1,11 @@
-/*package com.example.attendance_back;
+package com.example.attendance_back;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+
 
 import java.util.Date;
+
 public class Absente {
+
     private Integer id;
     private String teacher;
     private String subject;
@@ -61,4 +62,4 @@ public class Absente {
     public void setStatus(AbsentaStatus status) {
         this.status = status;
     }
-}*/
+}
