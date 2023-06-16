@@ -13,6 +13,10 @@ public class Student extends User{
         this.abstente = abstente;
     }
 
+    public Student() {
+
+    }
+
     public String getGroup() {
         return group;
     }

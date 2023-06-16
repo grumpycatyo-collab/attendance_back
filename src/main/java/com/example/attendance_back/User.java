@@ -1,13 +1,20 @@
 package com.example.attendance_back;
 
 
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 
+@MappedSuperclass
 public abstract class User {
     private String login;
     private String password;
+    @Id
     private Integer id;
     private String  name;
     private String surname;
+
+    protected User() {
+    }
 
     public String getLogin() {
         return login;

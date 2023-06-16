@@ -10,4 +10,7 @@ public class Admin extends User{
         super(login, password, id, name, surname);
     }
 
+    public Admin() {
+
+    }
 }
