@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AttendanceBackApplication {
     @Autowired
     private static UserRepository userRepository;
+
+
     public static void main(String[] args) {
         SpringApplication.run(AttendanceBackApplication.class, args);
         try {

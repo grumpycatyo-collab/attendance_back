@@ -25,10 +25,6 @@ public class Student extends User{
         this.group = group;
     }
 
-    public Absente getAbstente() {
-        return abstente;
-    }
-
     public void setAbstente(Absente abstente) {
         this.abstente = abstente;
     }
