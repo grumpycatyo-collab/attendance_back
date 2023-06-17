@@ -96,7 +96,7 @@ public class Absente {
                 '}';
     }
 
-    static ArrayList list = new ArrayList<Absente>();
+    public static ArrayList list = new ArrayList<Absente>();
     public static void startAbsente(){
         ArrayList<Date> dataAps = new ArrayList<>();
         dataAps.add(new Date(22,12,13));
@@ -105,7 +105,7 @@ public class Absente {
         ArrayList<Date> dataRec = new ArrayList<>();
         dataRec.add(new Date(23,12,13, 11,30));
         dataRec.add(new Date(23,12,12,12,2));
-        list.add(new Absente(1,"Gavrilita Mihail","PCAIT", dataAps,dataRec,"Neachitat","Gusev Roman"));
+        list.add(new Absente(1,"Gavrilita Mihail","PCAIT", dataAps,dataRec,"Neachitat","GusevRoman"));
 
         ArrayList<Date> dataAps2 = new ArrayList<>();
         dataAps2.add(new Date(25, 1, 14));

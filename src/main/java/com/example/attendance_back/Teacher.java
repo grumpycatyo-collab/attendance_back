@@ -4,7 +4,6 @@ import jakarta.persistence.Entity;
 
 import java.util.ArrayList;
 
-@Entity
 public class Teacher extends User {
     public Teacher() {
     }
