@@ -59,7 +59,23 @@ public class SendMail {
             message.setSubject("This is the Subject Line!");
 
             // Now set the actual message
-            message.setText("This is actual message");
+            message.setContent(
+                    "<HTml>\n" +
+                            "    <head>\n" +
+                            "\n" +
+                            "    </head>\n" +
+                            "    <body>\n" +
+                            "        <div style = \" width: 600px; background-color: azure; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">\n" +
+                            "            <img style='vertical-align:middle;width:100px;height:100px' src='https://admitere.utm.md/wp-content/uploads/2022/01/logo-sigla.png'>\n" +
+                            "            <h1 style='vertical-align:middle; display:inline;'>Aviz de recuperare a absenţelor</h1>\n" +
+                            "            <p><h3>Au apărut noi recuperări în cadrul contului dumneavoastră de SIMU!</h3></p>\n" +
+                            "            <p>Rugăm să verificaţi contul dumneavoastră pentru a vedea zilele de recuperare al absenţelor de la lucrările de laborator.</p>\n" +
+                            "            <p>De asemenea, rugăm să verificaţi corectitudinea datelor pentru a evita orice eroare!</p>\n" +
+                            "            <p>În caz de eroare, adresaţi-vă responsabilului din Decanatul UTM.</p>\n" +
+                            "        </div>\n" +
+                            "    </body>\n" +
+                            "</HTml>",
+                    "text/html");
 
             System.out.println("sending...");
             // Send message
