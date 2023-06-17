@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -41,6 +43,19 @@ public class AbsenceController {
         }
 
         return ResponseEntity.ok(absences);
+    }
+    @PutMapping("/{numeStudent}")
+    public ResponseEntity<Absente> updateAbsence(
+            @PathVariable String numeStudent,
+            @RequestParam(value = "status") String status,
+            @RequestBody ArrayList<Date> newDatesAbsenta
+    ) {
+        Absente updatedAbsence = absenceService.updateAbsence(numeStudent, status, newDatesAbsenta);
+        if (updatedAbsence != null) {
+            return ResponseEntity.ok(updatedAbsence);
+        } else {
+            return ResponseEntity.notFound().build(); // Absence not found
+        }
     }
 }
 
