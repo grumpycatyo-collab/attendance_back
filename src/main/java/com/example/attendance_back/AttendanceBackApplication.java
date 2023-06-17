@@ -29,7 +29,6 @@ public class AttendanceBackApplication  {
     public AttendanceBackApplication(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-
     public static void main(String[] args)  throws IOException {
         SpringApplication.run(AttendanceBackApplication.class, args);
     }
