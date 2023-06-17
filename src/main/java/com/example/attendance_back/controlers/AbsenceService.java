@@ -75,4 +75,29 @@ public class AbsenceService {
         }
         return absences;
     }
+    public Absente updateAbsence(String numeStudent, String status, ArrayList<Date> newDatesAbsenta) {
+        Absente absenceToUpdate = getAbsenceByStudentName(numeStudent);
+        if (absenceToUpdate != null) {
+            absenceToUpdate.setStatus(status);
+            absenceToUpdate.setDatesAbsenta(newDatesAbsenta);
+            return absenceToUpdate;
+        }
+        return null; // Absence not found
+    }
+
+    public List<Absente> getAbsencesByStudent(String numeStudent) {
+        return filterAbsencesByStudent2(absenceList, numeStudent);
+    }
+    private List<Absente> filterAbsencesByStudent2(List<Absente> absences, String numeStudent) {
+        return absences.stream()
+                .filter(absence -> absence.getNumeStudent().equals(numeStudent))
+                .collect(Collectors.toList());
+    }
+
+    private Absente getAbsenceByStudentName(String numeStudent) {
+        return absenceList.stream()
+                .filter(absence -> absence.getNumeStudent().equals(numeStudent))
+                .findFirst()
+                .orElse(null);
+    }
 }
