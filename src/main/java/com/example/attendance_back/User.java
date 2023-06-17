@@ -7,31 +7,14 @@ import jakarta.persistence.MappedSuperclass;
 
 @Entity
 public  class User {
-    private String login;
+
     private String role;
-    private String password;
     @Id
     private Integer id;
     private String  name;
     private String surname;
 
     protected User() {
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public Integer getId() {
@@ -66,10 +49,18 @@ public  class User {
         this.role = role;
     }
 
-    public User(String login, String role, String password, Integer id, String name, String surname) {
-        this.login = login;
+    @Override
+    public String toString() {
+        return "User{" +
+                "role='" + role + '\'' +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
+    }
+
+    public User(String role, Integer id, String name, String surname) {
         this.role = role;
-        this.password = password;
         this.id = id;
         this.name = name;
         this.surname = surname;
